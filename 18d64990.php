@@ -1,26 +1,13 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>18d64990</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<title>18d64990</title>
 </head>
 <body>
-<h1>Welcome to my guessing game</h1>
-<p> 
-<?php
-  if ( ! isset($_GET['guess']) ) { 
-    echo("Missing guess parameter");
-  } else if ( strlen($_GET['guess']) < 1 ) {
-    echo("Your guess is too short");
-  } else if ( ! is_numeric($_GET['guess']) ) {
-    echo("Your guess is not a number");
-  } else if ( $_GET['guess'] < 42 ) {
-    echo("Your guess is too low");
-  } else if ( $_GET['guess'] > 42 ) {
-    echo("Your guess is too high");
-  } else {
-    echo("Congratulations - You are right");
-  }
-?>
-</p>
+	<h1>Welcome to Rock Paper Scissors</h1>
+	<img src="rps.png" width="300px">
+	<a href="login.php">Please Log In</a>
+	<p> Attempt to go to <a href="game.php">Game</a> without logging in - it should fail with an error message.</p>
 </body>
 </html>
-  
